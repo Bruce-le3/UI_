@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64B5CC3B-BF9F-44BE-9089-8947305A2708}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Justech</RootNamespace>
+    <AssemblyName>Justech</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>justech.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BZ, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\BZ.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlIni, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ControlIni.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Function\CAMiClsBali.cs" />
+    <Compile Include="Function\ClsJson.cs" />
+    <Compile Include="Function\ClsZip.cs" />
+    <Compile Include="Function\DAQ_I32_1280.cs" />
+    <Compile Include="Function\GClsClient.cs" />
+    <Compile Include="Function\GFileOperate.cs" />
+    <Compile Include="Function\GMC1104.cs" />
+    <Compile Include="Function\CAMiClsCylinder.cs" />
+    <Compile Include="Function\GClsMethod.cs" />
+    <Compile Include="Function\CAMiClsMethod.cs" />
+    <Compile Include="Function\CAMiClsVariable.cs" />
+    <Compile Include="Function\GClsConfigFile.cs" />
+    <Compile Include="Function\AdlinkDask7432.cs" />
+    <Compile Include="Function\GClsScreen.cs" />
+    <Compile Include="Function\WebServiceAgent.cs" />
+    <Compile Include="OmornHostlink\ClsSocket-luo.cs" />
+    <Compile Include="OmornHostlink\CPK_STDEV_CALC.cs" />
+    <Compile Include="OmornHostlink\CRC.cs" />
+    <Compile Include="OmornHostlink\csv_err_write.cs" />
+    <Compile Include="OmornHostlink\FCS.cs" />
+    <Compile Include="OmornHostlink\GRR.cs" />
+    <Compile Include="OmornHostlink\Logs.cs" />
+    <Compile Include="OmornHostlink\ReadXls.cs" />
+    <Compile Include="Program\ClsEmptyRun.cs" />
+    <Compile Include="Program\ClsRun.cs" />
+    <Compile Include="Winform\FrmClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winform\FrmClient.Designer.cs">
+      <DependentUpon>FrmClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winform\FrmDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winform\FrmDisplay.Designer.cs">
+      <DependentUpon>FrmDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winform\FrmMotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winform\FrmMotion.Designer.cs">
+      <DependentUpon>FrmMotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winform\FrmPara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winform\FrmPara.Designer.cs">
+      <DependentUpon>FrmPara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winform\FrmPathSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winform\FrmPathSelect.Designer.cs">
+      <DependentUpon>FrmPathSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winform\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winform\Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OmornHostlink\Run.cs" />
+    <Compile Include="OmornHostlink\Status.cs" />
+    <Compile Include="UserControl\BT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\BT.Designer.cs">
+      <DependentUpon>BT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OmornHostlink\Chart_Draw.cs" />
+    <Compile Include="OmornHostlink\Socket_ClientConn.cs" />
+    <Compile Include="Function\GClsMontion.cs" />
+    <Compile Include="OmornHostlink\Socket_Server.cs" />
+    <Compile Include="OmornHostlink\ComLink.cs" />
+    <Compile Include="OmornHostlink\ComManager.cs" />
+    <Compile Include="OmornHostlink\ExceptionPlc.cs" />
+    <Compile Include="OmornHostlink\OmronHostLink.cs" />
+    <Compile Include="OmornHostlink\SerialPort.cs" />
+    <Compile Include="Winform\Function_Select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winform\Function_Select.Designer.cs">
+      <DependentUpon>Function_Select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winform\Grr_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winform\Grr_Test.Designer.cs">
+      <DependentUpon>Grr_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Winform\ResultSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winform\ResultSetting.Designer.cs">
+      <DependentUpon>ResultSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winform\Serial Port_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winform\Serial Port_Test.Designer.cs">
+      <DependentUpon>Serial Port_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winform\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winform\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Winform\FrmClient.resx">
+      <DependentUpon>FrmClient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winform\FrmDisplay.resx">
+      <DependentUpon>FrmDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winform\FrmMotion.resx">
+      <DependentUpon>FrmMotion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winform\FrmPara.resx">
+      <DependentUpon>FrmPara.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winform\FrmPathSelect.resx">
+      <DependentUpon>FrmPathSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winform\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winform\Function_Select.resx">
+      <DependentUpon>Function_Select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winform\Grr_Test.resx">
+      <DependentUpon>Grr_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winform\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winform\ResultSetting.resx">
+      <DependentUpon>ResultSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winform\Serial Port_Test.resx">
+      <DependentUpon>Serial Port_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Fakes Include="Fakes\YieldDisplay.fakes" />
+    <None Include="bin\Debug\Justech.exe.config" />
+    <None Include="bin\Release\2018-11-28-err.csv" />
+    <None Include="bin\Release\AxisCard_IO.xlsx" />
+    <None Include="bin\Release\Axis_IO.xlsx" />
+    <None Include="bin\Release\config.ini" />
+    <None Include="bin\Release\Error.log" />
+    <None Include="bin\Release\PLC_IO.xlsx" />
+    <None Include="bin\Release\UI_.exe.config" />
+    <None Include="bin\Release\UI_.vshost.exe.config" />
+    <None Include="bin\Release\UI_.vshost.exe.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImagePath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User50x50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAlarmLog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\network23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chuankou.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\io.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Push.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GRR.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\中英全称标准字%28居中%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AVI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Justech.exe" />
+    <Content Include="bin\Debug\Justech.pdb" />
+    <Content Include="bin\Release\CPK.jpg" />
+    <Content Include="bin\Release\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\Release\JDAQ.dll" />
+    <Content Include="bin\Release\MC1104.dll" />
+    <Content Include="bin\Release\NPOI.dll" />
+    <Content Include="bin\Release\NPOI.OOXML.dll" />
+    <Content Include="bin\Release\NPOI.OpenXml4Net.dll" />
+    <Content Include="bin\Release\NPOI.OpenXmlFormats.dll" />
+    <Content Include="bin\Release\UI_.exe" />
+    <Content Include="bin\Release\UI_.pdb" />
+    <Content Include="bin\Release\UI_.vshost.exe" />
+    <Content Include="ControlIni.dll" />
+    <Content Include="justech.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
