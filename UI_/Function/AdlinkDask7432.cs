@@ -5,8 +5,10 @@ public delegate void CallbackDelegate();
 
 public class DASK
 {
+	//为了生活
 	//ADLink PCI Card Type
-	public const ushort PCI_6208V		=1;
+	//public const ushort PCI_6208V		=1;
+	public const ushort PCI_6208V       =1;
 	public const ushort PCI_6208A		=2;
 	public const ushort PCI_6308V       =3;
 	public const ushort PCI_6308A       =4;
